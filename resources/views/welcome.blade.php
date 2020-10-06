@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Prova_Laravel_Luiz</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Prova_Laravel_Luiz
+                    Laravel
                 </div>
 
                 <div class="links">
@@ -94,6 +94,19 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <h2>Teste com rotas:</h2>
+                <form action="/contato" method="post">
+                    @csrf
+                    <input type="text" name="nome" placeholder="Nome / POST">
+                    <button>Enviar</button>
+                </form>
+
+                <form action="/contato" method="post">
+                    @csrf
+                    <input type="hidden" name="_method" value="put">
+                    <input type="text" name="nome" placeholder="Nome / PUT">
+                    <button>Enviar</button>
+                </form>
             </div>
         </div>
     </body>
